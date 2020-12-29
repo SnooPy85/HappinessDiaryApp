@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // This is the single source of truth for the settings.
     var appSettings = AppSettings()
     
     let languages = ["german", "english"]
@@ -16,12 +17,22 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            
+        
             NavigationView {
-                NavigationLink(destination: DayView()){
-                    ButtonView().environmentObject(appSettings)
-                }.navigationBarTitle("Home")
+                
+                VStack(spacing: 20) {
+                
+                    NavigationLink(destination: DayView()){
+                        ButtonView().environmentObject(appSettings)
+                    }.navigationBarTitle("Home")
+                    
+                    NavigationLink(destination: LanguageSelectView()){
+                        Text("language")
+                    }.navigationBarTitle("Home")
+                    
+                }
             }
+            
         }
     }
 }
