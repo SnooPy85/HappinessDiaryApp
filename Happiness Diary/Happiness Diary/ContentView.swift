@@ -9,35 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var isFirstTime = true
+    var appSettings = AppSettings()
+    
+    let languages = ["german", "english"]
+    @State var selectedLanguage = 0
     
     var body: some View {
         VStack(spacing: 20) {
-            if isFirstTime {
-                Text("Welcome! This is your Happiness Diary.")
-            } else {
-                Text("Welcome back")
+            
+            NavigationView {
+                NavigationLink(destination: DayView()){
+                    ButtonView().environmentObject(appSettings)
+                }.navigationBarTitle("Home")
             }
-            
-            // Use modified to format button:
-            
-            Button(action: {
-                self.isFirstTime.toggle()
-            }) {
-                if isFirstTime {
-                    Text("Get started")
-                } else {
-                    Text("Continue")
-                }
-            }.frame(width: 200, height: 50)
-            .background(Color(red: 212/255, green: 4/255, blue: 101/255))
-            .foregroundColor(Color.white)
-            .font(.system(size: 22, weight: .bold))
-            .clipShape(Capsule())
-            .shadow(radius: 5)
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
