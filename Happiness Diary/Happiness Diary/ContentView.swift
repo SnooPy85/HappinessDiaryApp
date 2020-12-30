@@ -26,7 +26,7 @@ struct ContentView: View {
                         ButtonView().environmentObject(appSettings)
                     }.navigationBarTitle("Home")
                     
-                    NavigationLink(destination: LanguageSelectView()){
+                    NavigationLink(destination: LanguageSelectView().environmentObject(appSettings)){
                         Text("language")
                     }.navigationBarTitle("Home")
                     

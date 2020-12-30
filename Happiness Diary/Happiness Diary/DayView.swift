@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DayView: View {
+    
+    let appTexts = AppTexts()
+    
     var body: some View {
         NavigationView {
             VStack (spacing: 20) {
@@ -15,6 +18,7 @@ struct DayView: View {
                 Text("Test")
                 Spacer()
                 Text("This is a placeholder where the used should later add daily experience.")
+                Text(appTexts.buttons["addEntry"]!["german"]!)
                 Spacer()
             }
         }

@@ -9,8 +9,11 @@ import SwiftUI
 
 struct LanguageSelectView: View {
     
-    let languageOptions = ["english", "german", "spanish"]
-    @State private var selectedLanguage = "german"
+    @EnvironmentObject var appSettings:AppSettings
+    let appTexts = AppTexts()
+    
+    // Set initial value of picked language (the one that is already set).
+    @State private var selectedLanguage = AppSettings().selectedLanguage
     
     var body: some View {
         NavigationView {
@@ -18,7 +21,7 @@ struct LanguageSelectView: View {
                 Spacer()
                 Text("Please set your language.")
                 Picker(selection: $selectedLanguage, label: Text("")){
-                    ForEach(self.languageOptions, id: \.self){ language in
+                    ForEach(self.appTexts.languages, id: \.self){ language in
                         HStack {
                             Text(language)
                                 .font(.title)
@@ -30,8 +33,15 @@ struct LanguageSelectView: View {
                 }
                 .labelsHidden()
                 .pickerStyle(WheelPickerStyle())
-
+                        
+                Button(action: {
+                    self.appSettings.selectedLanguage = selectedLanguage
+                                }) {
+                                    Text("\(appTexts.buttons["apply"]![selectedLanguage]!)")
+                                }
+                
                 Spacer()
+                
             }
         
         }

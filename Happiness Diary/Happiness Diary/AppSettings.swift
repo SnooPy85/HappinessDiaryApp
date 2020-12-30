@@ -10,7 +10,7 @@ import Combine
 
 final class AppSettings: ObservableObject {
     
-    @Published var selectedLanguge = 0
+    @Published var selectedLanguage: String = "english"
     @Published var addEntryText = "add entry"
     
 }

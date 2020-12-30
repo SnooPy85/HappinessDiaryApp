@@ -11,9 +11,10 @@ import SwiftUI
 struct ButtonView: View {
     
     @EnvironmentObject var appSettings:AppSettings
+    let appTexts = AppTexts()
     
     var body: some View {
-        Text("\(appSettings.addEntryText)")
+        Text("\(appTexts.buttons["addEntry"]![appSettings.selectedLanguage]!)")
             .frame(width: 200, height: 50)
             .background(Color(red: 212/255, green: 4/255, blue: 101/255))
             .foregroundColor(Color.white)
