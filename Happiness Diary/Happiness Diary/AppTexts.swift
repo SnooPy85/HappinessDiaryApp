@@ -28,5 +28,43 @@ struct AppTexts {
                                                      "english": "What are you thankfull for?",
                                                      "spanish": "¿De que estas agradecido?"]]
     
+    let days_texts: [String: [String : String]] = ["Monday":
+                                                    ["german": "Montag",
+                                                     "english": "Monday",
+                                                     "spanish": "Lunes"],
+                                                "Tuesday":
+                                                    ["german": "Dienstag",
+                                                     "english": "Tuesday",
+                                                     "spanish": "Martes"],
+                                                "Wednesday":
+                                                    ["german": "Mittwoch",
+                                                     "english": "Wednesday",
+                                                     "spanish": "Miércoles"],
+                                                "Thursday":
+                                                    ["german": "Donnerstag",
+                                                     "english": "Thutsday",
+                                                     "spanish": "Jueves"],
+                                                "Friday":
+                                                    ["geman": "Freitag",
+                                                     "english": "Friday",
+                                                     "spanish": "Viernes"],
+                                                "Saturday":
+                                                    ["german": "Samstag",
+                                                     "english": "Saturday",
+                                                     "spanish": "Sábado"],
+                                                "Sunday":
+                                                    ["german": "Sonntag",
+                                                     "english": "Sunday",
+                                                     "spanish": "Domingo"]]
+    
+    let textfield_texts: [String: [String : String]] = ["today_is":
+                                                            ["german": "Heute ist ",
+                                                             "english": "Today is ",
+                                                             "spanish": "Hoy es "],
+                                                        "hello_day_text":
+                                                            ["german": "Hey! Was für ein toller ",
+                                                             "english": "Hi! What a wonderful ",
+                                                             "spanish": "¡Hola! ¡Qué gran "]]
+    
 }
 

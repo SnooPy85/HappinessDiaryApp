@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     // This is the single source of truth for the settings.
-    var appSettings = AppSettings()
+    @EnvironmentObject var appSettings:AppSettings
+    //var appSettings = AppSettings()
+    let appTexts = AppTexts()
     
-    let languages = ["german", "english"]
-    @State var selectedLanguage = 0
+    //@State var selectedLanguage = 0
     
     var body: some View {
         VStack(spacing: 20) {
@@ -22,6 +23,8 @@ struct ContentView: View {
                 
                 VStack(spacing: 20) {
                 
+                    Text("\(appTexts.textfield_texts["hello_day_text"]![appSettings.selectedLanguage]!)\(appTexts.days_texts[DateFormatter().weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]]![appSettings.selectedLanguage]!).").font(.title)
+                    
                     NavigationLink(destination: DayView().environmentObject(appSettings)){
                         ButtonView().environmentObject(appSettings)
                     }.navigationBarTitle("Home")
