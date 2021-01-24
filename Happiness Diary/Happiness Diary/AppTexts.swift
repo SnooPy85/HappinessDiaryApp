@@ -22,7 +22,11 @@ struct AppTexts {
                                                 "apply":
                                                     ["german": "anwenden",
                                                      "english": "apply",
-                                                     "spanish": "aplicar"]]
+                                                     "spanish": "aplicar"],
+                                                "thankfullnessQuestion":
+                                                    ["german": "Wofür bist Du Dankbar?",
+                                                     "english": "What are you thankfull for?",
+                                                     "spanish": "¿De que estas agradecido?"]]
     
 }
 

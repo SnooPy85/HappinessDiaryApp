@@ -22,7 +22,7 @@ struct ContentView: View {
                 
                 VStack(spacing: 20) {
                 
-                    NavigationLink(destination: DayView()){
+                    NavigationLink(destination: DayView().environmentObject(appSettings)){
                         ButtonView().environmentObject(appSettings)
                     }.navigationBarTitle("Home")
                     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF204C00259CD322009FEFA3 /* AppTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF204BFF259CD322009FEFA3 /* AppTexts.swift */; };
 		DF4410E42596571A00B7339B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4410E32596571A00B7339B /* AppDelegate.swift */; };
 		DF4410E62596571A00B7339B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4410E52596571A00B7339B /* SceneDelegate.swift */; };
 		DF4410E82596571A00B7339B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4410E72596571A00B7339B /* ContentView.swift */; };
@@ -15,6 +16,10 @@
 		DF4410F02596571C00B7339B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */; };
 		DF4410FB2596571C00B7339B /* Happiness_DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4410FA2596571C00B7339B /* Happiness_DiaryTests.swift */; };
 		DF4411062596571C00B7339B /* Happiness_DiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4411052596571C00B7339B /* Happiness_DiaryUITests.swift */; };
+		DFB2A9BD259B734C009AF6D8 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9BC259B734C009AF6D8 /* DayView.swift */; };
+		DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */; };
+		DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */; };
+		DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF204BFF259CD322009FEFA3 /* AppTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTexts.swift; sourceTree = "<group>"; };
 		DF4410E02596571A00B7339B /* Happiness Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happiness Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4410E32596571A00B7339B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF4410E52596571A00B7339B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		DF4411012596571C00B7339B /* Happiness DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Happiness DiaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4411052596571C00B7339B /* Happiness_DiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happiness_DiaryUITests.swift; sourceTree = "<group>"; };
 		DF4411072596571C00B7339B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFB2A9BC259B734C009AF6D8 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,11 @@
 				DF4410E32596571A00B7339B /* AppDelegate.swift */,
 				DF4410E52596571A00B7339B /* SceneDelegate.swift */,
 				DF4410E72596571A00B7339B /* ContentView.swift */,
+				DFB2A9BC259B734C009AF6D8 /* DayView.swift */,
+				DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */,
+				DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */,
+				DF204BFF259CD322009FEFA3 /* AppTexts.swift */,
+				DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */,
 				DF4410E92596571C00B7339B /* Assets.xcassets */,
 				DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */,
 				DF4410F12596571C00B7339B /* Info.plist */,
@@ -267,6 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4410E42596571A00B7339B /* AppDelegate.swift in Sources */,
+				DFB2A9BD259B734C009AF6D8 /* DayView.swift in Sources */,
+				DF204C00259CD322009FEFA3 /* AppTexts.swift in Sources */,
+				DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */,
+				DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */,
+				DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */,
 				DF4410E62596571A00B7339B /* SceneDelegate.swift in Sources */,
 				DF4410E82596571A00B7339B /* ContentView.swift in Sources */,
 			);
