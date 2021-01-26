@@ -10,6 +10,8 @@ import Foundation
 
 class CalendarHelper {
 
+    // Standard date format is yyyy-MM-dd
+    
     let weekDayNumber:[String: Int] = ["Monday": 0, "Tuesday": 1, "Wednesday": 2,
                           "Thursday": 3, "Friday": 4, "Saturday": 5, "Sunday": 6]
     
@@ -25,12 +27,26 @@ class CalendarHelper {
     
     class func getCurrentDate() -> String {
         let todayFormated = DateFormatter()
-        todayFormated .dateFormat = "yyyy-MM-dd"
+        todayFormated.dateFormat = "yyyy-MM-dd"
         let todayString = todayFormated.string(from: Date())
         return todayString
     }
     
     let today = getCurrentDate()
+    
+    class func getCurrentDayInMonth() -> Int {
+        let currentDate = getCurrentDate()
+        // the int initializer cannot handle normal strings and would return nil.
+        // Therefore, we forece 0 in those cases.
+        return Int(currentDate.components(separatedBy: "-")[2]) ?? 0
+    }
+
+    class func getfirstWeekdayInMonth() -> String {
+        // Class method that returns the first week day of a month, e.g. Tuesday.
+        let dayNumber = getCurrentDayInMonth()
+        let firstDay = Calendar.current.date(byAdding: .day, value: -(dayNumber - 1), to: Date())
+        return DateFormatter().weekdaySymbols[Calendar.current.component(.weekday, from: firstDay!) - 1]
+    }
     
 }
 
