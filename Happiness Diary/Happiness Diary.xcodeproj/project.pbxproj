@@ -21,6 +21,7 @@
 		DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */; };
 		DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */; };
 		DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */; };
+		DFE339A425D02E87006CE690 /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE339A325D02E87006CE690 /* CalendarGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectView.swift; sourceTree = "<group>"; };
+		DFE339A325D02E87006CE690 /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				DF204BFF259CD322009FEFA3 /* AppTexts.swift */,
 				DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */,
 				DF186EDC25BDBE6700C234B6 /* CalendarHelper.swift */,
+				DFE339A325D02E87006CE690 /* CalendarGridView.swift */,
 				DF4410E92596571C00B7339B /* Assets.xcassets */,
 				DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */,
 				DF4410F12596571C00B7339B /* Info.plist */,
@@ -292,6 +295,7 @@
 				DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */,
 				DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */,
 				DF4410E62596571A00B7339B /* SceneDelegate.swift in Sources */,
+				DFE339A425D02E87006CE690 /* CalendarGridView.swift in Sources */,
 				DF4410E82596571A00B7339B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
