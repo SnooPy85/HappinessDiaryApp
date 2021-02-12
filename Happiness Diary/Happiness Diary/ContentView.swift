@@ -9,35 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var isFirstTime = true
+    // This is the single source of truth for the settings.
+    @EnvironmentObject var appSettings:AppSettings
+    //var appSettings = AppSettings()
+    let appTexts = AppTexts()
+    
+    //@State var selectedLanguage = 0
     
     var body: some View {
         VStack(spacing: 20) {
-            if isFirstTime {
-                Text("Welcome! This is your Happiness Diary.")
-            } else {
-                Text("Welcome back")
+        
+            NavigationView {
+                
+                VStack(spacing: 20) {
+                
+                    Text("\(appTexts.textfield_texts["hello_day_text"]![appSettings.selectedLanguage]!)\(appTexts.days_texts[DateFormatter().weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]]![appSettings.selectedLanguage]!).").font(.title)
+                    
+                    NavigationLink(destination: DayView().environmentObject(appSettings)){
+                        ButtonView().environmentObject(appSettings)
+                    }.navigationBarTitle("Home")
+                    
+                    NavigationLink(destination: LanguageSelectView().environmentObject(appSettings)){
+                        Text("language")
+                    }.navigationBarTitle("Home")
+                    
+                }
             }
             
-            // Use modified to format button:
-            
-            Button(action: {
-                self.isFirstTime.toggle()
-            }) {
-                if isFirstTime {
-                    Text("Get started")
-                } else {
-                    Text("Continue")
-                }
-            }.frame(width: 200, height: 50)
-            .background(Color(red: 212/255, green: 4/255, blue: 101/255))
-            .foregroundColor(Color.white)
-            .font(.system(size: 22, weight: .bold))
-            .clipShape(Capsule())
-            .shadow(radius: 5)
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
