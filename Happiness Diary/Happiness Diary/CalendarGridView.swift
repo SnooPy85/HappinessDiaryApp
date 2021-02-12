@@ -9,21 +9,27 @@ import SwiftUI
 
 struct CalendarGridView: View {
     
-    let rows:Int = 6
-    let cols:Int = 7
+    let frame_size:CGFloat = 25
+    let currentDay:Int = CalendarHelper.getCurrentDayInMonth()
     let monthArray = CalendarHelper.getMonthCalenderArray(month: "January", year: 2021)
-        
+    
+    
+    
     var body: some View {
         
-        VStack{
+        VStack(alignment: .leading){
             ForEach(monthArray, id: \.self){ week in
-                HStack{
+                HStack(alignment: .lastTextBaseline){
                     ForEach(week, id: \.self){ day in
                         Spacer()
                         if day == 99 {
-                            Text("")
+                            Text("").frame(width: self.frame_size, height: self.frame_size)
                         } else {
-                            Text("\(day)")
+                            if day == self.currentDay {
+                                Text("\(day)").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 0/255, green: 0/255, blue: 0/255)).font(.system(size: 16, weight: .bold))
+                            } else {
+                                Text("\(day)").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 150/255, green: 150/255, blue: 150/255)).font(.system(size: 16))
+                            }
                         }
                         Spacer()
                     }

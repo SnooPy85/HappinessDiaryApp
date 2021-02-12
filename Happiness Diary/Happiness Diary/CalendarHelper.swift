@@ -41,7 +41,7 @@ class CalendarHelper {
     
     class func getCurrentDayInMonth() -> Int {
         let currentDate = getCurrentDate()
-        // the int initializer cannot handle normal strings and would return nil.
+        // The int initializer cannot handle normal strings and would return nil.
         // Therefore, we forece 0 in those cases.
         return Int(currentDate.components(separatedBy: "-")[2]) ?? 0
     }
