@@ -47,6 +47,16 @@ class CalendarHelper {
     
     let today = getCurrentDate()
     
+    class func getCurrentYear() -> Int {
+        let currentDate = getCurrentDate()
+        return Int(currentDate.components(separatedBy: "-")[0]) ?? 0
+    }
+    
+    class func getCurrentMonth() -> String {
+        let currentDate = getCurrentDate()
+        return CalendarHelper().monthNumber[currentDate.components(separatedBy: "-")[1]]!
+    }
+    
     class func getallYears() -> [Int] {
         let currentDate = getCurrentDate()
         let currentYear = Int(currentDate.components(separatedBy: "-")[0]) ?? 0

@@ -10,10 +10,14 @@ import SwiftUI
 struct CalendarGridView: View {
     
     let frame_size:CGFloat = 25
+    let currentYear:Int = CalendarHelper.getCurrentYear()
+    let currentMonth:String = CalendarHelper.getCurrentMonth()
+    
+    // to add: if selected month is current month (and year):
+    // set current day, else 0
+    
     let currentDay:Int = CalendarHelper.getCurrentDayInMonth()
     let monthArray = CalendarHelper.getMonthCalenderArray(month: "January", year: 2021)
-    
-    
     
     var body: some View {
         
