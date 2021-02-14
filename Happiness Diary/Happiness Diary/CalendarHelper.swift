@@ -30,6 +30,14 @@ class CalendarHelper {
                                      "September": 30, "October": 31, "November": 30,
                                      "December": 31]
     
+    let allMonths:[String] = ["January", "February", "March", "April", "May", "June",
+                              "July", "August", "September", "October", "November", "December"]
+    
+    // Getter method to just return a months array (without instance being created).
+    class func getAllMonths() -> [String] {
+        return CalendarHelper().allMonths
+    }
+            
     class func getCurrentDate() -> String {
         let todayFormated = DateFormatter()
         todayFormated.dateFormat = "yyyy-MM-dd"
@@ -38,6 +46,16 @@ class CalendarHelper {
     }
     
     let today = getCurrentDate()
+    
+    class func getallYears() -> [Int] {
+        let currentDate = getCurrentDate()
+        let currentYear = Int(currentDate.components(separatedBy: "-")[0]) ?? 0
+        var yearsArray:[Int] = []
+        for y in 2020...currentYear {
+            yearsArray.append(y)
+        }
+        return yearsArray
+    }
     
     class func getCurrentDayInMonth() -> Int {
         let currentDate = getCurrentDate()
