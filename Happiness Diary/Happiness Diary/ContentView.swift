@@ -33,6 +33,10 @@ struct ContentView: View {
                         Text("language")
                     }.navigationBarTitle("Home")
                     
+                    NavigationLink(destination: CalendarGridView().environmentObject(appSettings)){
+                        Text("Calendar")
+                    }.navigationBarTitle("Home")
+                    
                 }
             }
             

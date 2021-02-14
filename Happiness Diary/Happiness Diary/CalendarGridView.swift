@@ -9,17 +9,21 @@ import SwiftUI
 
 struct CalendarGridView: View {
     
+    @EnvironmentObject var appSettings:AppSettings
+    
     let frame_size:CGFloat = 25
     let currentYear:Int = CalendarHelper.getCurrentYear()
     let currentMonth:String = CalendarHelper.getCurrentMonth()
-    
+        
     // to add: if selected month is current month (and year):
     // set current day, else 0
     
-    let currentDay:Int = CalendarHelper.getCurrentDayInMonth()
-    let monthArray = CalendarHelper.getMonthCalenderArray(month: "January", year: 2021)
+    // Will be chnaged later in case selected month and year is not of current date.
+    var currentDay:Int = CalendarHelper.getCurrentDayInMonth()
     
     var body: some View {
+        
+        let monthArray = CalendarHelper.getMonthCalenderArray(month: appSettings.selectedMonth, year: appSettings.selectedYear)
         
         VStack(alignment: .leading){
             ForEach(monthArray, id: \.self){ week in
@@ -29,7 +33,7 @@ struct CalendarGridView: View {
                         if day == 99 {
                             Text("").frame(width: self.frame_size, height: self.frame_size)
                         } else {
-                            if day == self.currentDay {
+                            if (day == self.currentDay) && (appSettings.selectedYear == self.currentYear) && (appSettings.selectedMonth == self.currentMonth) {
                                 Text("\(day)").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 0/255, green: 0/255, blue: 0/255)).font(.system(size: 16, weight: .bold))
                             } else {
                                 Text("\(day)").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 150/255, green: 150/255, blue: 150/255)).font(.system(size: 16))
