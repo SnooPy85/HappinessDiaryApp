@@ -25,6 +25,9 @@ class CalendarHelper {
                                        "July": 7, "August": 8, "September": 9,
                                        "October": 10, "November": 11, "December": 12]
     
+    
+    // Note: The rule switching years with 29 days in February will be applied in
+    // the method getMonthCalenderArray.
     let daysByMonth:[String: Int] = ["January": 31, "February": 28, "March": 31, "April": 30,
                                      "May": 31, "June": 30, "July": 31, "August": 31,
                                      "September": 30, "October": 31, "November": 30,
