@@ -21,6 +21,7 @@
 		DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */; };
 		DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */; };
 		DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */; };
+		DFC5085C25D9656C00F5CC76 /* CalendarFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */; };
 		DFE339A425D02E87006CE690 /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE339A325D02E87006CE690 /* CalendarGridView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectView.swift; sourceTree = "<group>"; };
+		DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFullView.swift; sourceTree = "<group>"; };
 		DFE339A325D02E87006CE690 /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */,
 				DF186EDC25BDBE6700C234B6 /* CalendarHelper.swift */,
 				DFE339A325D02E87006CE690 /* CalendarGridView.swift */,
+				DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */,
 				DF4410E92596571C00B7339B /* Assets.xcassets */,
 				DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */,
 				DF4410F12596571C00B7339B /* Info.plist */,
@@ -289,6 +292,7 @@
 			files = (
 				DF4410E42596571A00B7339B /* AppDelegate.swift in Sources */,
 				DF186EDD25BDBE6700C234B6 /* CalendarHelper.swift in Sources */,
+				DFC5085C25D9656C00F5CC76 /* CalendarFullView.swift in Sources */,
 				DFB2A9BD259B734C009AF6D8 /* DayView.swift in Sources */,
 				DF204C00259CD322009FEFA3 /* AppTexts.swift in Sources */,
 				DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */,
