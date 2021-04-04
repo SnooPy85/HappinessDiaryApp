@@ -34,9 +34,37 @@ struct CalendarGridView: View {
                             Text("").frame(width: self.frame_size, height: self.frame_size)
                         } else {
                             if (day == self.currentDay) && (appSettings.selectedYear == self.currentYear) && (appSettings.selectedMonth == self.currentMonth) {
-                                Text("\(day)").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 0/255, green: 0/255, blue: 0/255)).font(.system(size: 16, weight: .bold))
+                                
+                                if (day < 10){
+                                    
+                                    NavigationLink(destination: DayView(date: "\(appSettings.selectedYear)-\(CalendarHelper.getNumberOfMonthMM(month: appSettings.selectedMonth))-0\(day) ").environmentObject(appSettings)){
+                                        Text("\(day)")
+                                    }.navigationBarTitle("Calendar").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 0/255, green: 0/255, blue: 0/255)).font(.system(size: 16, weight: .bold))
+                                    
+                                } else {
+                            
+                                    NavigationLink(destination: DayView(date: "\(appSettings.selectedYear)-\(CalendarHelper.getNumberOfMonthMM(month: appSettings.selectedMonth))-\(day) ").environmentObject(appSettings)){
+                                        Text("\(day)")
+                                    }.navigationBarTitle("Calendar").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 0/255, green: 0/255, blue: 0/255)).font(.system(size: 16, weight: .bold))
+                                    
+                                }
+                                
                             } else {
-                                Text("\(day)").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 150/255, green: 150/255, blue: 150/255)).font(.system(size: 16))
+                                
+                                if (day < 10){
+                                    
+                                    NavigationLink(destination: DayView(date: "\(appSettings.selectedYear)-\(CalendarHelper.getNumberOfMonthMM(month: appSettings.selectedMonth))-0\(day) ").environmentObject(appSettings)){
+                                        Text("\(day)")
+                                    }.navigationBarTitle("Calendar").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 150/255, green: 150/255, blue: 150/255)).font(.system(size: 16))
+                                    
+                                } else {
+                                    
+                                    NavigationLink(destination: DayView(date: "\(appSettings.selectedYear)-\(CalendarHelper.getNumberOfMonthMM(month: appSettings.selectedMonth))-\(day) ").environmentObject(appSettings)){
+                                        Text("\(day)")
+                                    }.navigationBarTitle("Calendar").frame(width: self.frame_size, height: self.frame_size).foregroundColor(Color(red: 150/255, green: 150/255, blue: 150/255)).font(.system(size: 16))
+                                    
+                                }
+                                
                             }
                         }
                         Spacer()

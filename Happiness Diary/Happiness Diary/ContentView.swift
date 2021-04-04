@@ -16,6 +16,12 @@ struct ContentView: View {
     
     //@State var selectedLanguage = 0
     
+    let date:String
+    
+    init(){
+        self.date = CalendarHelper.getCurrentDate()
+    }
+    
     var body: some View {
         VStack(spacing: 20) {
         
@@ -25,7 +31,7 @@ struct ContentView: View {
                 
                     Text("\(appTexts.textfield_texts["hello_day_text"]![appSettings.selectedLanguage]!)\(appTexts.days_texts[DateFormatter().weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]]![appSettings.selectedLanguage]!).").font(.title)
                     
-                    NavigationLink(destination: DayView().environmentObject(appSettings)){
+                    NavigationLink(destination: DayView(date: self.date).environmentObject(appSettings)){
                         ButtonView().environmentObject(appSettings)
                     }.navigationBarTitle("Home")
                     

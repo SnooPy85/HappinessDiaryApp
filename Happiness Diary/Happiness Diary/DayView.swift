@@ -16,10 +16,18 @@ struct DayView: View {
     @State private var secondThankfullnessEntry = ""
     @State private var thirdThankfullnessEntry = ""
     
+    let date:String
+    
+    init(date: String){
+        self.date = date
+    }
+    
     var body: some View {
         NavigationView {
             
             VStack{
+                Text("\(self.date)").padding(.bottom, 20)
+                
                 HeaderView(text: "\(appTexts.buttons["thankfullnessQuestion"]![appSettings.selectedLanguage]!)")
                 
                 VStack(spacing: 10){

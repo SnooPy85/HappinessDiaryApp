@@ -26,6 +26,14 @@ class CalendarHelper {
                                        "October": 10, "November": 11, "December": 12]
     
     
+    static func getNumberOfMonthMM(month:String) -> String {
+        let numberOfMonthMM:[String:String] = ["January": "01", "February": "02", "March": "03", "April": "04", "May": "05", "June": "06",
+            "July": "07", "August": "08", "September": "09",
+            "October": "10", "November": "11", "December": "12"]
+        return numberOfMonthMM[month]!
+    }
+    
+    
     // Note: The rule switching years with 29 days in February will be applied in
     // the method getMonthCalenderArray.
     let daysByMonth:[String: Int] = ["January": 31, "February": 28, "March": 31, "April": 30,
