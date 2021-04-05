@@ -22,5 +22,9 @@ public class DiaryDay: NSManagedObject, Identifiable {
 
 extension DiaryDay {
 
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<DiaryDay> {
+        return NSFetchRequest<DiaryDay>(entityName: "DiaryDay")
+    }
+    
 }
 
