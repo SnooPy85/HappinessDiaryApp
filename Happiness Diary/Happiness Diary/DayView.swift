@@ -10,62 +10,64 @@ import CoreData
 
 struct DayView: View {
     
+    
     @Environment(\.managedObjectContext) var managedObjectContext
     @EnvironmentObject var appSettings:AppSettings
     
     let appTexts = AppTexts()
+    //let dataContainerContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dataContainerContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @State var entry:[DiaryDay]?
-    @State private var firstThankfullnessEntry = ""
-    @State private var secondThankfullnessEntry = ""
-    @State private var thirdThankfullnessEntry = ""
-    @State private var feelingEntry = Float64(0.0)
-    
+    var entries:[DiaryDay]?
     let date:String
     
-    init(date: String){
-        self.date = date
-        self.fetchThisDaysData()
-    }
+    @State var entry:[DiaryDay]?
+    @State private var firstThankfullnessEntry:String
+    @State private var secondThankfullnessEntry:String
+    @State private var thirdThankfullnessEntry:String
+    @State private var feelingEntry:Float64
     
-    func fetchThisDaysData() {
+    
+    init(date: String){
         
-        do {
-            let request = DiaryDay.fetchRequest() as NSFetchRequest<DiaryDay>
-            let predicateFilter = NSPredicate(format: "date == %@", self.date)
-            request.predicate = predicateFilter
-            self.entry = try dataContainerContext.fetch(request)
-            
-            if self.entry != nil {
-                firstThankfullnessEntry = self.entry![0].entryOne!
-                secondThankfullnessEntry = self.entry![0].entryTwo!
-                thirdThankfullnessEntry = self.entry![0].entryThree!
-                feelingEntry = Float64(self.entry![0].feeling)
-            } else {
-                print("No data to fetch")
-            }
-            
+        self.date = date
+        
+        // Fetch data form core data (use fetchRequest methof of DiaryDay class (and call as such). Filter by single date.
+        let request = DiaryDay.fetchRequest() as NSFetchRequest<DiaryDay>
+        let pred = NSPredicate(format: "date == %@", date)
+        request.predicate = pred
+        self.entries = try! dataContainerContext.fetch(request)
+        
+        if self.entries!.count == 0 {
+            // Case where no entry for that day exists!
+            _firstThankfullnessEntry = State(initialValue: "")
+            _secondThankfullnessEntry = State(initialValue: "")
+            _thirdThankfullnessEntry = State(initialValue: "")
+            _feelingEntry = State(initialValue: 0.0)
+        } else {
+            // Case where there is data. If a certain attribute is not saved for thta day,
+            // a text message is shown as empty and the slider in the middle position
+            _firstThankfullnessEntry = State(initialValue: String(self.entries![0].entryOne!))
+            _secondThankfullnessEntry = State(initialValue: String(self.entries![0].entryTwo!))
+            _thirdThankfullnessEntry = State(initialValue: String(self.entries![0].entryThree!))
+            _feelingEntry = State(initialValue: Float64(self.entries![0].feeling))
         }
-        
-        catch {
-            print("no data")
-        }
-        
+
     }
     
     
     func saveThisDaysData(){
         
-        let newDiaryDay = DiaryDay(context: self.dataContainerContext)
+        let newDiaryDay = DiaryDay(context: dataContainerContext)
         newDiaryDay.entryOne = self.firstThankfullnessEntry
         newDiaryDay.entryTwo = self.secondThankfullnessEntry
         newDiaryDay.entryThree = self.thirdThankfullnessEntry
         newDiaryDay.feeling = Float(self.feelingEntry)
         newDiaryDay.date = self.date
+        newDiaryDay.weekday = "Monday"
         
         do {
-            try self.dataContainerContext.save()
+            try dataContainerContext.save()
         }
         catch {
             print("saving did not work...")
