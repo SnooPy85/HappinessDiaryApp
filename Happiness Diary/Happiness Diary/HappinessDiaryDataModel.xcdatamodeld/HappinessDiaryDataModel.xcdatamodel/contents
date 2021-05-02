@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DiaryDay" representedClassName="DiaryDay" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="entryOne" optional="YES" attributeType="String"/>
+        <attribute name="entryThree" optional="YES" attributeType="String"/>
+        <attribute name="entryTwo" optional="YES" attributeType="String"/>
+        <attribute name="feeling" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weekday" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DiaryDay" positionX="-63" positionY="-18" width="128" height="14"/>
+    </elements>
+</model>

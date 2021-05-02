@@ -25,11 +25,30 @@ class CalendarHelper {
                                        "July": 7, "August": 8, "September": 9,
                                        "October": 10, "November": 11, "December": 12]
     
+    
+    static func getNumberOfMonthMM(month:String) -> String {
+        let numberOfMonthMM:[String:String] = ["January": "01", "February": "02", "March": "03", "April": "04", "May": "05", "June": "06",
+            "July": "07", "August": "08", "September": "09",
+            "October": "10", "November": "11", "December": "12"]
+        return numberOfMonthMM[month]!
+    }
+    
+    
+    // Note: The rule switching years with 29 days in February will be applied in
+    // the method getMonthCalenderArray.
     let daysByMonth:[String: Int] = ["January": 31, "February": 28, "March": 31, "April": 30,
                                      "May": 31, "June": 30, "July": 31, "August": 31,
                                      "September": 30, "October": 31, "November": 30,
                                      "December": 31]
     
+    let allMonths:[String] = ["January", "February", "March", "April", "May", "June",
+                              "July", "August", "September", "October", "November", "December"]
+    
+    // Getter method to just return a months array (without instance being created).
+    class func getAllMonths() -> [String] {
+        return CalendarHelper().allMonths
+    }
+            
     class func getCurrentDate() -> String {
         let todayFormated = DateFormatter()
         todayFormated.dateFormat = "yyyy-MM-dd"
@@ -38,6 +57,26 @@ class CalendarHelper {
     }
     
     let today = getCurrentDate()
+    
+    class func getCurrentYear() -> Int {
+        let currentDate = getCurrentDate()
+        return Int(currentDate.components(separatedBy: "-")[0]) ?? 0
+    }
+    
+    class func getCurrentMonth() -> String {
+        let currentDate = getCurrentDate()
+        return CalendarHelper().monthNumber[currentDate.components(separatedBy: "-")[1]]!
+    }
+    
+    class func getallYears() -> [Int] {
+        let currentDate = getCurrentDate()
+        let currentYear = Int(currentDate.components(separatedBy: "-")[0]) ?? 0
+        var yearsArray:[Int] = []
+        for y in 2020...currentYear {
+            yearsArray.append(y)
+        }
+        return yearsArray
+    }
     
     class func getCurrentDayInMonth() -> Int {
         let currentDate = getCurrentDate()

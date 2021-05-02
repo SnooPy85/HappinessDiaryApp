@@ -26,7 +26,24 @@ struct AppTexts {
                                                 "thankfullnessQuestion":
                                                     ["german": "Wofür bist Du Dankbar?",
                                                      "english": "What are you thankfull for?",
-                                                     "spanish": "¿De que estas agradecido?"]]
+                                                     "spanish": "¿De que estas agradecido?"],
+                                                "save":
+                                                    ["german": "speichern",
+                                                     "english": "save",
+                                                     "spanish": "ahorrar"],
+                                                "feelingQuestion":
+                                                    ["german": "Wie fühlst Du Dich heute?",
+                                                     "english": "How do you feel today?",
+                                                     "spanish": "¿Cómo te sientes hoy?"]]
+    
+    let headers: [String: [String:String]] = ["thankfullnessQuestion":
+                                                ["german": "Wofür bist Du dankbar?",
+                                                 "english": "What are you thankfull for?",
+                                                 "spanish": "¿De que estas agradecido?"],
+                                              "feelingQuestion":
+                                                  ["german": "Wie fühlst Du Dich heute?",
+                                                   "english": "How do you feel today?",
+                                                   "spanish": "¿Cómo te sientes hoy?"]]
     
     let days_texts: [String: [String : String]] = ["Monday":
                                                     ["german": "Montag",

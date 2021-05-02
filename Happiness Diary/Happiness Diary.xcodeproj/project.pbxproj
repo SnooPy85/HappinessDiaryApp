@@ -17,10 +17,15 @@
 		DF4410F02596571C00B7339B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */; };
 		DF4410FB2596571C00B7339B /* Happiness_DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4410FA2596571C00B7339B /* Happiness_DiaryTests.swift */; };
 		DF4411062596571C00B7339B /* Happiness_DiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4411052596571C00B7339B /* Happiness_DiaryUITests.swift */; };
+		DF8711C526189CE900273B46 /* HappinessDiaryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF8711C326189CE900273B46 /* HappinessDiaryDataModel.xcdatamodeld */; };
+		DF8711D12618A66700273B46 /* DiaryDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8711D02618A66700273B46 /* DiaryDay.swift */; };
+		DFAC634425F50D2A0049AAB2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC634325F50D2A0049AAB2 /* HeaderView.swift */; };
 		DFB2A9BD259B734C009AF6D8 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9BC259B734C009AF6D8 /* DayView.swift */; };
 		DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */; };
 		DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */; };
 		DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */; };
+		DFBF30BA25F4C413002631F2 /* FeelingSliderView_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF30B925F4C413002631F2 /* FeelingSliderView_old.swift */; };
+		DFC5085C25D9656C00F5CC76 /* CalendarFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */; };
 		DFE339A425D02E87006CE690 /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE339A325D02E87006CE690 /* CalendarGridView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +63,15 @@
 		DF4411012596571C00B7339B /* Happiness DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Happiness DiaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4411052596571C00B7339B /* Happiness_DiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happiness_DiaryUITests.swift; sourceTree = "<group>"; };
 		DF4411072596571C00B7339B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8711C426189CE900273B46 /* HappinessDiaryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HappinessDiaryDataModel.xcdatamodel; sourceTree = "<group>"; };
+		DF8711D02618A66700273B46 /* DiaryDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDay.swift; sourceTree = "<group>"; };
+		DFAC634325F50D2A0049AAB2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DFB2A9BC259B734C009AF6D8 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectView.swift; sourceTree = "<group>"; };
+		DFBF30B925F4C413002631F2 /* FeelingSliderView_old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingSliderView_old.swift; sourceTree = "<group>"; };
+		DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFullView.swift; sourceTree = "<group>"; };
 		DFE339A325D02E87006CE690 /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +126,7 @@
 				DF4410E32596571A00B7339B /* AppDelegate.swift */,
 				DF4410E52596571A00B7339B /* SceneDelegate.swift */,
 				DF4410E72596571A00B7339B /* ContentView.swift */,
+				DF8711D02618A66700273B46 /* DiaryDay.swift */,
 				DFB2A9BC259B734C009AF6D8 /* DayView.swift */,
 				DFB2A9CA259B7E9F009AF6D8 /* ButtonView.swift */,
 				DFB2A9D2259B877C009AF6D8 /* AppSettings.swift */,
@@ -123,10 +134,14 @@
 				DFB2A9DA259B98B4009AF6D8 /* LanguageSelectView.swift */,
 				DF186EDC25BDBE6700C234B6 /* CalendarHelper.swift */,
 				DFE339A325D02E87006CE690 /* CalendarGridView.swift */,
+				DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */,
+				DFBF30B925F4C413002631F2 /* FeelingSliderView_old.swift */,
+				DFAC634325F50D2A0049AAB2 /* HeaderView.swift */,
 				DF4410E92596571C00B7339B /* Assets.xcassets */,
 				DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */,
 				DF4410F12596571C00B7339B /* Info.plist */,
 				DF4410EB2596571C00B7339B /* Preview Content */,
+				DF8711C326189CE900273B46 /* HappinessDiaryDataModel.xcdatamodeld */,
 			);
 			path = "Happiness Diary";
 			sourceTree = "<group>";
@@ -289,14 +304,19 @@
 			files = (
 				DF4410E42596571A00B7339B /* AppDelegate.swift in Sources */,
 				DF186EDD25BDBE6700C234B6 /* CalendarHelper.swift in Sources */,
+				DF8711D12618A66700273B46 /* DiaryDay.swift in Sources */,
+				DFC5085C25D9656C00F5CC76 /* CalendarFullView.swift in Sources */,
 				DFB2A9BD259B734C009AF6D8 /* DayView.swift in Sources */,
 				DF204C00259CD322009FEFA3 /* AppTexts.swift in Sources */,
 				DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */,
 				DFB2A9D3259B877C009AF6D8 /* AppSettings.swift in Sources */,
 				DFB2A9CB259B7E9F009AF6D8 /* ButtonView.swift in Sources */,
 				DF4410E62596571A00B7339B /* SceneDelegate.swift in Sources */,
+				DF8711C526189CE900273B46 /* HappinessDiaryDataModel.xcdatamodeld in Sources */,
 				DFE339A425D02E87006CE690 /* CalendarGridView.swift in Sources */,
 				DF4410E82596571A00B7339B /* ContentView.swift in Sources */,
+				DFBF30BA25F4C413002631F2 /* FeelingSliderView_old.swift in Sources */,
+				DFAC634425F50D2A0049AAB2 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +639,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF8711C326189CE900273B46 /* HappinessDiaryDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF8711C426189CE900273B46 /* HappinessDiaryDataModel.xcdatamodel */,
+			);
+			currentVersion = DF8711C426189CE900273B46 /* HappinessDiaryDataModel.xcdatamodel */;
+			path = HappinessDiaryDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DF4410D82596571A00B7339B /* Project object */;
 }
