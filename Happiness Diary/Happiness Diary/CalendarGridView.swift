@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CalendarGridView: View {
     
+    //@Environment(\.managedObjectContext) var managedObjectContext
     @EnvironmentObject var appSettings:AppSettings
     
     let frame_size:CGFloat = 25

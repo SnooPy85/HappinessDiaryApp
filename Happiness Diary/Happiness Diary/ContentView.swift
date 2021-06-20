@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     // This is the single source of truth for the settings.
+    //@Environment(\.managedObjectContext) var managedObjectContext
     @EnvironmentObject var appSettings:AppSettings
     //var appSettings = AppSettings()
     let appTexts = AppTexts()
@@ -42,6 +43,11 @@ struct ContentView: View {
                     NavigationLink(destination: CalendarFullView().environmentObject(appSettings)){
                         Text("Calendar")
                     }.navigationBarTitle("Home")
+                    
+                    NavigationLink(destination: ProgressChartView().environmentObject(appSettings)){
+                        Text("Track your progress")
+                    }.navigationBarTitle("Home")
+                    
                     
                 }
             }

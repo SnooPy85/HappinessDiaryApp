@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF13D276267F648400B0ADEE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DF13D275267F648400B0ADEE /* SwiftUICharts */; };
+		DF13D278267F64F500B0ADEE /* ProgressChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13D277267F64F500B0ADEE /* ProgressChartView.swift */; };
 		DF186EDD25BDBE6700C234B6 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF186EDC25BDBE6700C234B6 /* CalendarHelper.swift */; };
 		DF204C00259CD322009FEFA3 /* AppTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF204BFF259CD322009FEFA3 /* AppTexts.swift */; };
 		DF4410E42596571A00B7339B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4410E32596571A00B7339B /* AppDelegate.swift */; };
@@ -47,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF13D277267F64F500B0ADEE /* ProgressChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressChartView.swift; sourceTree = "<group>"; };
 		DF186EDC25BDBE6700C234B6 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		DF204BFF259CD322009FEFA3 /* AppTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTexts.swift; sourceTree = "<group>"; };
 		DF4410E02596571A00B7339B /* Happiness Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happiness Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF13D276267F648400B0ADEE /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,7 @@
 				DFC5085B25D9656C00F5CC76 /* CalendarFullView.swift */,
 				DFBF30B925F4C413002631F2 /* FeelingSliderView_old.swift */,
 				DFAC634325F50D2A0049AAB2 /* HeaderView.swift */,
+				DF13D277267F64F500B0ADEE /* ProgressChartView.swift */,
 				DF4410E92596571C00B7339B /* Assets.xcassets */,
 				DF4410EE2596571C00B7339B /* LaunchScreen.storyboard */,
 				DF4410F12596571C00B7339B /* Info.plist */,
@@ -188,6 +193,9 @@
 			dependencies = (
 			);
 			name = "Happiness Diary";
+			packageProductDependencies = (
+				DF13D275267F648400B0ADEE /* SwiftUICharts */,
+			);
 			productName = "Happiness Diary";
 			productReference = DF4410E02596571A00B7339B /* Happiness Diary.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +267,9 @@
 				Base,
 			);
 			mainGroup = DF4410D72596571A00B7339B;
+			packageReferences = (
+				DF13D274267F648400B0ADEE /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = DF4410E12596571A00B7339B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,6 +317,7 @@
 				DF186EDD25BDBE6700C234B6 /* CalendarHelper.swift in Sources */,
 				DF8711D12618A66700273B46 /* DiaryDay.swift in Sources */,
 				DFC5085C25D9656C00F5CC76 /* CalendarFullView.swift in Sources */,
+				DF13D278267F64F500B0ADEE /* ProgressChartView.swift in Sources */,
 				DFB2A9BD259B734C009AF6D8 /* DayView.swift in Sources */,
 				DF204C00259CD322009FEFA3 /* AppTexts.swift in Sources */,
 				DFB2A9DB259B98B4009AF6D8 /* LanguageSelectView.swift in Sources */,
@@ -639,6 +651,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF13D274267F648400B0ADEE /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF13D275267F648400B0ADEE /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF13D274267F648400B0ADEE /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DF8711C326189CE900273B46 /* HappinessDiaryDataModel.xcdatamodeld */ = {

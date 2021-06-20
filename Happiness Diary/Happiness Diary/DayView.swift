@@ -31,7 +31,8 @@ struct DayView: View {
     init(date: String){
         
         self.date = date
-        
+        print(self.date)
+            
         // Fetch data form core data (use fetchRequest methof of DiaryDay class (and call as such). Filter by single date.
         let request = DiaryDay.fetchRequest() as NSFetchRequest<DiaryDay>
         let pred = NSPredicate(format: "date == %@", date)

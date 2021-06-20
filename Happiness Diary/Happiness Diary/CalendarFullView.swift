@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CalendarFullView: View {
     
+    //@Environment(\.managedObjectContext) var managedObjectContext
     @EnvironmentObject var appSettings:AppSettings
     let appTexts = AppTexts()
     
